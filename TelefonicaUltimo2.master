@@ -1,0 +1,634 @@
+<%@Master language="C#"%>
+<%@Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx"%>
+<%@Register TagPrefix="wssuc" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx"%>
+<%@Register TagPrefix="SearchWC" Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx"%>
+
+<!DOCTYPE HTML>
+<SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
+<head runat="server">
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+<meta charset="utf-8" />
+<meta name="GENERATOR" content="Microsoft SharePoint + TopSharePoint.com Theme" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="0" />
+<SharePoint:RobotsMetaTag runat="server" />
+<SharePoint:SPShortcutIcon runat="server" IconUrl="~sitecollection/_catalogs/masterpage/ResponsiveMaster/images/favicon.ico" />
+<SharePoint:SPPinnedSiteTile runat="server" TileUrl="~sitecollection/_catalogs/masterpage/ResponsiveMaster/images/metrotile.png" TileColor="#333333" />				
+<SharePoint:PageTitle runat="server"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /></asp:ContentPlaceHolder></SharePoint:PageTitle>
+<SharePoint:StartScript runat="server" />
+<SharePoint:CssLink runat="server" Version="15" />
+<SharePoint:CacheManifestLink runat="server" />
+<SharePoint:PageRenderMode runat="server" RenderModeType="Standard" />
+
+
+<SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
+<SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+<SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
+<SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
+<SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+<SharePoint:ScriptLink language="javascript" name="~sitecollection/_catalogs/masterpage/ResponsiveMaster/js/jquery-3.3.1.min.js" runat="server" />
+<SharePoint:ScriptLink language="javascript" name="~sitecollection/_catalogs/masterpage/ResponsiveMaster/js/jquery-ui.min.js" runat="server"  />
+<SharePoint:ScriptLink language="javascript" name="~sitecollection/_catalogs/masterpage/ResponsiveMaster/js/bootstrap.min.js" runat="server" />
+
+
+
+<SharePoint:CustomJSUrl runat="server" />
+<SharePoint:SoapDiscoveryLink runat="server" />
+<asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
+<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
+<SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
+<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/_catalogs/masterpage/ResponsiveMaster/css/bootstrap.css %>" ID="CssRegistration2" After="corev15.css" runat="server" />
+<SharePoint:CssRegistration name="<% $SPUrl:~SiteCollection/_catalogs/masterpage/ResponsiveMaster/css/style.css %>" ID="CssRegistration6" After="corev15.css" runat="server" />	
+	
+</head>
+	
+<body>
+<SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+<SharePoint:ImageLink runat="server" />
+<SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
+<script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
+<WebPartPages:SPWebPartManager runat="server"/>		
+<asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+		
+<!-- Start Ribbon -->
+<PublishingRibbon:PublishingRibbon runat="server" __designer:Preview="&lt;table cellpadding=&quot;4&quot; cellspacing=&quot;0&quot; style=&quot;font: messagebox; color: buttontext; background-color: buttonface; border: solid 1px; border-top-color: buttonhighlight; border-left-color: buttonhighlight; border-bottom-color: buttonshadow; border-right-color: buttonshadow&quot;&gt;
+                &lt;tr&gt;&lt;td nowrap&gt;&lt;span style=&quot;font-weight: bold; color: red&quot;&gt;Error Rendering Control&lt;/span&gt; - Unnamed1&lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;An unhandled exception has occurred.&lt;br /&gt;Exception has been thrown by the target of an invocation.&lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;" __designer:Values="&lt;P N=&#39;TemplateControl&#39; R=&#39;0&#39; /&gt;"/>
+<!-- End Ribbon -->
+			
+<SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly" __designer:Preview="" __designer:Values="&lt;P N=&#39;AuthenticationRestrictions&#39; E=&#39;2&#39; /&gt;&lt;P N=&#39;PermissionsString&#39; T=&#39;EmptyMask&#39; /&gt;&lt;P N=&#39;ID&#39; T=&#39;ctl01&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"><wssuc:Welcome runat="server" EnableViewState="false" /></SharePoint:SPSecurityTrimmedControl>
+
+<div id="s4-workspace">
+<div id="s4-bodyContainer">
+
+<div class="fecha">
+   <div class="container">
+      13 de Septiembre de 2018
+   </div>
+</div>
+<div class="container">
+   <div class="row brand">
+      <div class="col-6 col-md-6 col-xl-6 p-0">
+         <h1>
+            <a href="#">
+            <img alt="Telefonica" class="img-fluid center-block float-left" src="https://panoramastk.sharepoint.com/sites/Comunidades/_catalogs/masterpage/ResponsiveMaster/img/telefonica-logo.png">
+            </a>
+         </h1>
+      </div>
+      <div class="col-6 col-md-6 col-xl-6 p-0">
+         <img src="https://panoramastk.sharepoint.com/sites/Comunidades/_catalogs/masterpage/ResponsiveMaster/img/adn-logo.png" class="img-fluid center-block float-right" alt="">
+      </div>
+   </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bluedark">
+   <div class="container">
+      <div class="row">
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <!-- ITEM SOMOS TELEFONICA -->
+               <li class="dropdown">
+                  <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Somos Telefónica
+                  </a>
+                  <div class="dropdown-menu">
+                     <div class="container">
+                        <div class="row">
+                           <!-- DESPLEGABLE SOMOS TELEFONICA-->
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Acerca de Telefónica </a></li>
+                                 <li><a href="#">Visión </a></li>
+                                 <li>
+                                    <a href="#">Nuestra Marca</a>
+                                    <ul>
+                                       <li><a href="#">Lineamiento de Marca</a></li>
+                                       <li><a href="#">Plantillas</a></li>
+                                    </ul>
+                                 </li>
+                                 <li><a href="#">Elegimos Todo </a></li>
+                                 <li><a href="#">Intranet Global </a></li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li>
+                                    <a href="#">Comunicación Externa</a>
+                                    <ul>
+                                       <li><a href="#">Blogs Corporativos  </a></li>
+                                       <li><a href="#">Fundación Telefónica</a></li>
+                                       <li><a href="#">Speedy </a></li>
+                                       <li><a href="#">Telefónica Empresas  </a></li>
+                                       <li><a href="#">Telefónica Negocios </a></li>
+                                       <li><a href="#">Telefónica Pública  </a></li>
+                                       <li><a href="#">Wayra</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li>
+                                    <a href="#">Comunicación Interna</a>
+                                    <ul>
+                                       <li><a href="#">+Cerca </a></li>
+                                       <li><a href="#">+Zoom</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li>
+                                    <a href="#">Fundación Telefónica</a>                
+                                    <ul>
+                                       <li><a href="#">Grupo en ADN </a></li>
+                                       <li><a href="#">Sitio Externo </a></li>
+                                    </ul>
+                                 </li>
+                                 <li><a href="#">Universitas</a></li>
+                                 <li><a href="#">Políticas Uso ADN</a></li>
+                              </ul>
+                           </div>
+                           <!-- FIN DESPLEGABLE SOMOS TELEFONICA-->
+                        </div>
+                        <!-- cierra .row  -->
+                     </div>
+                     <!-- cierra .container  -->   
+                  </div>
+                  <!--cierra .dropdown-menu-->
+               </li>
+               <!-- ITEM EMPLEADOS -->
+               <li class="dropdown">
+                  <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Empleados
+                  </a>
+                  <div class="dropdown-menu">
+                     <div class="container">
+                        <div class="row">
+                           <!-- DESPLEGABLE EMPLEADOS-->
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li>
+                                    <a href="#">Beneficios</a>
+                                    <ul>
+                                       <li><a href="#">Plan de Acciones</a></li>
+                                       <li><a href="#">Sitio Empleados</a></li>
+                                       <li><a href="#">Para Vos</a></li>
+                                    </ul>
+                                 </li>
+                                 <li><a href="#">Capital Humano</a></li>
+                                 <li>
+                                    <a href="#">Cliente Interno</a>
+                                    <ul>
+                                       <li><a href="#">Política de contraseñas</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Compensaciones y beneficios </a></li>
+                                 <li><a href="#">Desarrollo </a></li>
+                                 <li><a href="#">Empleos telefonica</a></li>
+                                 <li><a href="#">Gestión de Aliados</a></li>
+                                 <li><a href="#">Manual de Convivencia</a></li>
+                                 <li><a href="#">Planeamiento</a></li>
+                                 <li><a href="#">Micrositio 0365 </a></li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Principios de negocio responsable</a></li>
+                                 <li><a href="#">Relaciones laborales </a></li>
+                                 <li><a href="#">Seguridad e higiene en el trabajo</a></li>
+                                 <li><a href="#">Salud ocupacional </a></li>
+                                 <li><a href="#">Espacios que nos conectan</a></li>
+                                 <li><a href="#">Normativas Corporativas del Grupo Telefónica </a></li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Centro de Atención al empleado </a></li>
+                                 <li><a href="#">Success factors</a></li>
+                                 <li><a href="#">Principios de Negocio Responsable</a></li>
+                                 <li><a href="#">Feriados y Días de Pago</a></li>
+                                 <li><a href="#">Canal de Denuncias (Intranet Global) </a></li>
+                              </ul>
+                           </div>
+                           <!-- FIN EMPLEADOS-->
+                        </div>
+                        <!-- cierra .row  -->
+                     </div>
+                     <!-- cierra .container  -->  
+                  </div>
+                  <!--cierra .dropdown-menu-->
+               </li>
+               <!-- ITEM SOPORTE -->
+               <li class="dropdown">
+                  <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Soporte
+                  </a>
+                  <div class="dropdown-menu">
+                     <div class="container">
+                        <div class="row">
+                           <!-- DESPLEGABLE SOPORTE-->
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Medioambiente</a></li>
+                                 <li>
+                                    <a href="#">Políticas y procesos</a>
+                                    <ul>
+                                       <li><a href="#">Normativas corporativas del G.Telefónica</a></li>
+                                       <li><a href="#">Políticas y procesos </a></li>
+                                    </ul>
+                                 </li>
+                                 <li><a href="#">Auditoría Interna</a></li>
+                                 <li><a href="#">Calidad </a></li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Compliance</a></li>
+                                 <li><a href="#">Compras</a></li>
+                                 <li><a href="#">Dirección de Adm Comercial</a></li>
+                                 <li>
+                                    <a href="#">Gestión de la información</a>
+                                    <ul>
+                                       <li><a href="#">Comunidad de la información</a></li>
+                                       <li><a href="#">Portal de Información</a></li>
+                                       <li><a href="#">R.U.T.A.</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Gestión del cambio</a></li>
+                                 <li><a href="#">Facilidades </a></li>
+                                 <li><a href="#">Inteligencia de Mercado</a></li>
+                                 <li><a href="#">Secretaría General</a></li>
+                                 <li><a href="#">Seguridad de la información</a></li>
+                                 <li><a href="#">Seguridad física y electrónica</a></li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Service management </a></li>
+                                 <li><a href="#">Sitios Movistar</a></li>
+                                 <li><a href="#">Portal de Información </a></li>
+                                 <li><a href="#">Edificios corporativos</a></li>
+                              </ul>
+                           </div>
+                           <!-- FIN SOPORTE-->
+                        </div>
+                        <!-- cierra .row  -->
+                     </div>
+                     <!-- cierra .container  -->  
+                  </div>
+                  <!--cierra .dropdown-menu-->
+               </li>
+               <!-- ITEM EL NEGOCIO -->
+               <li class="dropdown">
+                  <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  El Negocio
+                  </a>
+                  <div class="dropdown-menu">
+                     <div class="container">
+                        <div class="row">
+                           <!-- DESPLEGABLE EL NEGOCIO-->
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li>
+                                    <a href="#">Comunicación Externa</a>
+                                    <ul>
+                                       <li><a href="#">Movistar</a></li>
+                                       <li><a href="#">Telefónica Empresas</a></li>
+                                       <li><a href="#">Telefónica Negocios</a></li>
+                                    </ul>
+                                 </li>
+                                 <li>
+                                    <a href="#">Reporting Contact Center</a>
+                                    <ul>
+                                       <li><a href="#">Acceso a TGO 360</a></li>
+                                       <li><a href="#">Acceso a TIM Fijo Móvil </a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="col-12 col-md-12 col-lg-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Experiencia Clientes </a></li>
+                                 <li><a href="#">Implementaciones Comerciales </a></li>
+                                 <li><a href="#">News </a></li>
+                                 <li><a href="#">Portal T3</a></li>
+                                 <li><a href="#">SCD Oktopus </a></li>
+                              </ul>
+                           </div>
+                           <!-- FIN DESPLEGABLE EL NEGOCIO-->
+                        </div>
+                        <!-- cierra .row  -->
+                     </div>
+                     <!-- cierra .container  -->  
+                  </div>
+                  <!--cierra .dropdown-menu-->
+               </li>
+               <!--ITEM - ES NOTICIA-->
+               <li class="dropdown">
+                  <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                  Es Noticia
+                  </a>
+                  <div class="dropdown-menu">
+                     <div class="container">
+                        <div class="row">
+                           <!-- DESPLEGABLE ES NOTICIA-->
+                           <div class="col-md-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Ingreso Autogestión clave de red</a></li>
+                                 <li><a href="#">Mi área personal</a></li>
+                                 <li><a href="#">Micrositio 0365</a></li>
+                                 <li><a href="#">News</a></li>
+                                 <li><a href="#">Portal T3</a></li>
+                                 <li><a href="#">Autogestión de Claves de red</a></li>
+                              </ul>
+                           </div>
+                           <div class="col-md-3 nav-column">
+                              <ul>
+                                 <li><a href="#">ISIM-Gestor de Identidades</a></li>
+                                 <li><a href="#">Solicitud de Taxi o Remises</a></li>
+                                 <li><a href="#">Buscador de Asistentes</a></li>
+                                 <li><a href="#">Remedy Argentina</a></li>
+                                 <li><a href="#">Web Gastos Menores (TMA)</a></li>
+                              </ul>
+                           </div>
+                           <div class="col-md-3 nav-column">
+                              <ul>
+                                 <li><a href="#">Web Gastos Menores (TASA)</a></li>
+                                 <li><a href="#">Success Factors </a></li>
+                                 <li><a href="#">Portal CH</a></li>
+                                 <li><a href="#">Centro de atención al Empleado</a></li>
+                                 <li><a href="#">Oficce 365</a></li>
+                              </ul>
+                           </div>
+                           <!-- FIN DESPLEGABLE ES NOTICIA-->
+                        </div>
+                        <!-- cierra .row  -->
+                     </div>
+                     <!-- cierra .container  -->  
+                  </div>
+                  <!--cierra .dropdown-menu-->
+               </li>
+            </ul>
+         </div>
+         <div class="herramientas no-gutters" style="position: relative; margin-left: 9px">
+            <a class="btn-herramientas" data-toggle="collapse" href="#herramientas" role="button" aria-expanded="false" aria-controls="herramientas">Herramientas<i class="icon-cog"></i></a>
+         </div>
+      </div>
+      <!--CIERRA row-->
+   </div>
+   <!--CIERRA container-->
+</nav>
+<a class="btn-m-herramientas" data-toggle="collapse" href="#herramientas" role="button" aria-expanded="false" aria-controls="herramientas"><i class="icon-angle-down"></i>Herramientas<i class="icon-cog"></i></a>
+<!--////// - PANEL HERRAMIENTAS - //////--> 
+<div class="collapse" id="herramientas">
+   <div class="panel-herramientas">
+      <div class="container pt-5 pb-5">
+         <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 text-center pb-4">
+               <h2>ACCESOS DIRECTOS</h2>
+               <div class="st-border"></div>
+            </div>
+            <div class="col-md-1">
+            <ul>
+               <li><a class="icon-cancel-circle btn-cerrar" href="#"></a></li>
+               <li><a class="icon-pencil" href="#"></a></li>
+            </ul>
+            </div>
+         </div>
+         <!-- FINAL FILA TITULO -->
+         <div class="row accesos">
+            <div class="col-lg-3 sp-border">
+               <ul>
+                  <li>Portal T3<i class="icon-angle-right"></i></li>
+                  <span>Bajada de texto simulado</span>
+                  <li>Sincropool<i class="icon-angle-right"></i></li>
+                  <span>Solicitud de Taxi o Remises</span>
+                  <li>News<i class="icon-angle-right"></i></li>
+                  <span>Bajada de texto simulado</span>
+               </ul>
+            </div>
+            <div class="col-lg-5 sp-border">
+               <ul>
+                  <li>Autogestión de Claves de red<i class="icon-angle-right"></i></li>
+                  <span>Bajada de texto simulado<i class="icon-angle-right"></i></span>
+                  <li>Buscador de Asistentes<i class="icon-angle-right"></i></li>
+                  <span>Solicitud de Taxi o Remises</span>
+                  <li>Mi Área Personal</li>
+                  <span>Bajada de texto simulado</span>
+               </ul>
+            </div>
+            <div class="col-lg-4">
+               <ul>
+                  <li>ISIM-Gestor de Identidades<i class="icon-angle-right"></i></li>
+                  <span>Bajada de texto simulado</span>
+                  <li>Micrositio 0365<i class="icon-angle-right"></i></li>
+                  <span>Solicitud de Taxi o Remises</span>
+                  <li>Portal CH<i class="icon-angle-right"></i></li>
+                  <span>Bajada de texto simulado</span>
+               </ul>
+            </div>
+         </div>
+         <!--ROW-->
+      </div>
+      <div class="panel-365">
+         <div class="container">
+            <div class="row py-4 py-4">
+               <div class="col-md-1"></div>
+               <div class="col-md-10">
+                  <h2>0365 A TU ALCANCE</h2>
+               </div>
+               <div class="col-md-1">
+                  <ul>
+                     <li><a class="icon-pencil" href="#"></a></li>
+                  </ul>
+                  
+               </div>
+            </div>
+            <!--ROW-->
+            <ul class="iconos-365">
+               <li class="caja blue"><i class="ms-Icon OutlookLogoInverse16"></i><span>Mail</span></li>
+               <li class="caja blue"><i class="ms-Icon Calendar"></i><span>Calendar</span></li>
+               <li class="caja blue"><i class="ms-Icon People"></i><span>People</span></li>
+               <li class="caja blue"><i class="ms-Icon YammerLogo"></i><span>Yammer</span></li>
+               <li class="caja blue"><i class="ms-Icon OneDrive"></i><span>OneDrive</span></li>
+               <li class="caja blue"><i class="ms-Icon Word"></i><span>Word</span>
+            </ul>
+            <!--cierra contenedor iconos-365-->
+         </div>
+      </div>
+   </div>
+</div>
+
+<p>ACA VA EL BODYYY</p>
+<footer>
+	<div class="container">
+	Telefónica &copy; <span id="anio">2018</span> Aviso Legal
+	</div>
+</footer>
+<!-- Start Top Navigation
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container"> <!--
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/" style="padding-top: 0px !important"><img id="logoPC" src="/SiteAssets/Dev/img/logoPC.png" style="width: 235px" /></a>
+		</div> -->
+		<!--
+		<div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
+			<PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" __designer:Preview="&lt;table cellpadding=4 cellspacing=0 style=&quot;font:messagebox;color:buttontext;background-color:buttonface;border: solid 1px;border-top-color:buttonhighlight;border-left-color:buttonhighlight;border-bottom-color:buttonshadow;border-right-color:buttonshadow&quot;&gt;
+              &lt;tr&gt;&lt;td nowrap&gt;&lt;span style=&quot;font-weight:bold&quot;&gt;PortalSiteMapDataSource&lt;/span&gt; - topSiteMap&lt;/td&gt;&lt;/tr&gt;
+              &lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;/table&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;topSiteMap&#39; /&gt;&lt;P N=&#39;SiteMapProvider&#39; T=&#39;GlobalNavigationSwitchableProvider&#39; /&gt;&lt;P N=&#39;EnableViewState&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;ShowStartingNode&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;TrimNonCurrentTypes&#39; E=&#39;32&#39; /&gt;&lt;P N=&#39;StartingNodeUrl&#39; T=&#39;/SITES/COMUNIDADES&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/>
+			<SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="true" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" __designer:Preview="&lt;link id=&quot;CssLink-5e596c4af32947fe9ab0636cbab9333d&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/_layouts/15/3082/styles/menu-21.css&quot;/&gt;
+&lt;div id=&quot;zz4_TopNavigationMenu&quot; class=&quot; noindex ms-core-listMenu-horizontalBox&quot;&gt;
+	&lt;ul id=&quot;zz6_RootAspMenu&quot; class=&quot;root ms-core-listMenu-root static&quot;&gt;
+		&lt;li class=&quot;static ms-verticalAlignTop ms-listMenu-editLink ms-navedit-editArea&quot;&gt;&lt;span class=&quot;ms-navedit-editSpan&quot; id=&quot;zz4_TopNavigationMenu_NavMenu_Edit&quot;&gt;&lt;a id=&quot;zz4_TopNavigationMenu_NavMenu_EditLinks&quot; class=&quot;ms-navedit-editLinksText&quot; href=&quot;#&quot; onclick=&quot;g_QuickLaunchMenu = null; EnsureScriptParams(&amp;#39;quicklaunch.js&amp;#39;, &amp;#39;QuickLaunchInitEditMode&amp;#39;, &amp;#39;zz4_TopNavigationMenu&amp;#39;, 1, 1, 0, &amp;#39;\u002fSITES\u002fCOMUNIDADES&amp;#39;); cancelDefault(event); return false;&quot; title=&quot;Editar vínculos&quot;&gt;&lt;span class=&quot;ms-displayInlineBlock&quot;&gt;&lt;span class=&quot;ms-navedit-editLinksIconWrapper ms-verticalAlignMiddle&quot;&gt;&lt;img class=&quot;ms-navedit-editLinksIcon&quot; src=&quot;/_layouts/15/images/spcommon.png?rev=44#ThemeKey=spcommon&quot; alt=&quot;Editar vínculos&quot; role=&quot;presentation&quot; /&gt;&lt;/span&gt;&lt;span class=&quot;ms-metadata ms-verticalAlignMiddle&quot;&gt;Editar vínculos&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;span id=&quot;zz4_TopNavigationMenu_NavMenu_Loading&quot; class=&quot;ms-navedit-menuLoading ms-hide&quot;&gt;&lt;a id=&quot;zz4_TopNavigationMenu_NavMenu_GearsLink&quot; href=&quot;#&quot; onclick=&quot;HideGears(); return false;&quot; title=&quot;Esta animación indica que la operación está en curso. Al hacer clic se quita la imagen animada.&quot;&gt;&lt;img id=&quot;zz4_TopNavigationMenu_NavMenu_GearsImage&quot; src=&quot;/_layouts/15/images/loadingcirclests16.gif?rev=44&quot; alt=&quot;Esta animación indica que la operación está en curso. Al hacer clic se quita la imagen animada.&quot; /&gt;&lt;/a&gt;&lt;/span&gt;&lt;div id=&quot;zz4_TopNavigationMenu_NavMenu_ErrorMsg&quot; class=&quot;ms-navedit-errorMsg&quot;&gt;
+
+		&lt;/div&gt;&lt;/span&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;TopNavigationMenu&#39; /&gt;&lt;P N=&#39;UseSimpleRendering&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;UseSeparateCSS&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;AdjustForShowStartingNode&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;MaximumDynamicDisplayLevels&#39; T=&#39;1&#39; /&gt;&lt;P N=&#39;Orientation&#39; E=&#39;0&#39; /&gt;&lt;P N=&#39;SkipLinkText&#39; R=&#39;-1&#39; /&gt;&lt;P N=&#39;DataSourceID&#39; T=&#39;topSiteMap&#39; /&gt;&lt;P N=&#39;SupportsDisabledAttribute&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;AccessKey&#39; Bound=&#39;True&#39; T=&#39;Resources:wss,navigation_accesskey&#39; /&gt;&lt;P N=&#39;EnableViewState&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;RenderingCompatibility&#39; Serial=&#39;AAEAAAD/////AQAAAAAAAAAEAQAAAA5TeXN0ZW0uVmVyc2lvbgQAAAAGX01ham9yBl9NaW5vcgZfQnVpbGQJX1JldmlzaW9uAAAAAAgICAgEAAAAAAAAAP//////////Cw&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;" __designer:Templates="&lt;Group Name=&quot;Item Templates&quot;&gt;&lt;Template Name=&quot;StaticItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;Template Name=&quot;DynamicItemTemplate&quot; Flags=&quot;D&quot; Content=&quot;&quot; /&gt;&lt;/Group&gt;"/>
+		</div> -->
+	<!--</div>
+</nav>
+<!-- End Top Navigation -->
+
+<!-- Start Title Area -->
+<!--
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="pageTitle">	
+				<SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server" __designer:Preview="&lt;span id=&quot;ctl00_DeltaPlaceHolderPageTitleInTitleArea&quot;&gt;							
+					
+						&lt;span&gt;&lt;/span&gt;
+					
+				&lt;/span&gt;" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;DeltaPlaceHolderPageTitleInTitleArea&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;">							
+					<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">
+						<SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+							<PATHSEPARATORTEMPLATE><SharePoint:ClusteredDirectionalSeparatorArrow runat="server" /></PATHSEPARATORTEMPLATE>
+						</SharePoint:SPTitleBreadcrumb>
+					</asp:ContentPlaceHolder>
+				</SharePoint:AjaxDelta>
+			</h1>
+		</div>
+	</div>
+</div>
+-->
+<!-- End Title Area -->
+
+<!-- Start Breadcrumbs -->
+<!-- 
+<asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server" />
+<!-- End Breadcrumbs -->
+
+<!-- Start Left Navigation --><!-- 
+<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server"/>
+<!-- End Left Navigation -->	
+					
+<!-- Start Main Content --><!-- 
+<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+<!-- End Main Content -->
+
+<!-- Start Right Navigation --><!-- 
+<asp:ContentPlaceHolder id="PlaceHolderRightNavBar" runat="server"/>
+<!-- End Right Navigation -->
+
+<!-- Start Footer -->
+<!--
+<div class="section-colored stickyfooter">
+	<div class="container">
+		<footer>			
+			<div class="row">
+				<div class="col-md-4">
+					<h3>ShareBoot - SharePoint 2013 Theme</h3>
+					<p>More SharePoint Themes by <a href="http://www.topsharepoint.com/themes" target="_blank">TopSharePoint.com</a></p>
+					<a href="http://www.topsharepoint.com/somnio-premium-sharepoint-2013-theme" target="_blank">Somnio SharePoint 2013 Theme</a><br />
+					<a href="http://www.topsharepoint.com/brevis-premium-sharepoint-2013-theme" target="_blank">Brevis SharePoint 2013 Theme</a><br />
+					<a href="http://www.topsharepoint.com/xpecto-free-sharepoint-2013-theme" target="_blank">xpecto SharePoint 2013 Theme</a><br />
+					<a href="http://www.topsharepoint.com/allegra-premium-sharepoint-2010-theme" target="_blank">Allegra SharePoint 2010 Theme</a><br />
+					<a href="http://www.topsharepoint.com/avicia-free-sharepoint-online-theme" target="_blank">Avicia SharePoint 2010 Theme</a><br />
+					<a href="http://www.topsharepoint.com/responsive-free-sharepoint-2010-theme" target="_blank">Responsive SharePoint 2010 Theme</a>
+				</div>
+				<div class="col-md-4">
+					<h3>Lorem ATR Dolor</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+					<a href="#">Home</a><br />
+					<a href="#">About Us</a><br />
+					<a href="#">Services</a><br />
+					<a href="#">Portfolio</a><br />
+					<a href="#">Contact Us</a>
+				</div>
+				<div class="col-md-4">
+					<h3>Search The Site</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+					<!-- Start Search -->
+					<!-- <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+						<SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" __MarkupType="vsattributemarkup" WebPart="true" Height="" Width="" __WebPartId="{2E1D7FAB-A665-4F3E-B2B4-7FF4B658BD4C}" id="g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c" __designer:Preview="&lt;div class=&quot;ms-webpart-chrome ms-webpart-chrome-fullWidth &quot;&gt;
+	&lt;div WebPartID=&quot;00000000-0000-0000-0000-000000000000&quot; HasPers=&quot;true&quot; id=&quot;WebPart&quot; width=&quot;100%&quot; class=&quot;ms-WPBody noindex &quot; OnlyForMePart=&quot;true&quot; allowDelete=&quot;false&quot; style=&quot;&quot; &gt;&lt;div componentid=&quot;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr&quot; id=&quot;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr&quot;&gt;&lt;div id=&quot;SearchBox&quot; name=&quot;Control&quot;&gt;&lt;div class=&quot;ms-srch-sb ms-srch-sb-border&quot; id=&quot;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr_sboxdiv&quot;&gt;&lt;input type=&quot;text&quot; value=&quot;Búsqueda...&quot; maxlength=&quot;2048&quot; title=&quot;Búsqueda...&quot; id=&quot;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr_sbox&quot; autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; onkeypress=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {if (Srch.U.isEnterKey(String.fromCharCode(event.keyCode))) {$find(&#39;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr&#39;).search($get(&#39;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr_sbox&#39;).value);return Srch.U.cancelEvent(event);}})&quot; onkeydown=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {var ctl = $find(&#39;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr&#39;);ctl.activateDefaultQuerySuggestionBehavior();})&quot; onfocus=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {var ctl = $find(&#39;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr&#39;);ctl.hidePrompt();ctl.setBorder(true);})&quot; onblur=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {var ctl = $find(&#39;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr&#39;); if (ctl){ ctl.showPrompt(); ctl.setBorder(false);}})&quot; class=&quot;ms-textSmall ms-srch-sb-prompt ms-helperText&quot;/&gt;&lt;a title=&quot;Realiza búsquedas&quot; role=&quot;button&quot; class=&quot;ms-srch-sb-searchLink&quot; id=&quot;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr_SearchLink&quot; onclick=&quot;EnsureScriptFunc(&#39;Search.ClientControls.js&#39;, &#39;Srch.U&#39;, function() {$find(&#39;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr&#39;).search($get(&#39;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr_sbox&#39;).value);})&quot; href=&quot;javascript: {}&quot; &gt;&lt;img src=&quot;/_layouts/15/images/searchresultui.png?rev=44#ThemeKey=searchresultui&quot; class=&quot;ms-srch-sb-searchImg&quot; id=&quot;searchImg&quot; alt=&quot;Realiza búsquedas&quot; /&gt;&lt;/a&gt;&lt;div class=&quot;ms-qSuggest-container ms-shadow&quot; id=&quot;AutoCompContainer&quot;&gt;&lt;div id=&quot;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_csr_AutoCompList&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;noscript&gt;&lt;div id=&quot;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c_noscript&quot;&gt;Parece que el explorador no tiene JavaScript habilitado. Active JavaScript e inténtelo de nuevo.&lt;/div&gt;&lt;/noscript&gt;&lt;div id=&quot;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c&quot;&gt;
+
+	&lt;/div&gt;&lt;div class=&quot;ms-clear&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;" __designer:Values="&lt;P N=&#39;UseSharedSettings&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;EmitStyleReference&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;ServerInitialRender&#39; T=&#39;True&#39; /&gt;&lt;P N=&#39;TryInplaceQuery&#39; T=&#39;False&#39; /&gt;&lt;P N=&#39;ChromeType&#39; E=&#39;2&#39; /&gt;&lt;P N=&#39;ID&#39; T=&#39;g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c&#39; /&gt;&lt;P N=&#39;FrameType&#39; E=&#39;0&#39; /&gt;&lt;P N=&#39;Qualifier&#39; ID=&#39;1&#39; T=&#39;ctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c&#39; /&gt;&lt;P N=&#39;ClientName&#39; T=&#39;varPartctl00_g_2e1d7fab_a665_4f3e_b2b4_7ff4b658bd4c&#39; /&gt;&lt;P N=&#39;EffectiveFrameType&#39; E=&#39;0&#39; /&gt;&lt;P N=&#39;ExportMode&#39; E=&#39;1&#39; /&gt;&lt;P N=&#39;WebBrowsableObject&#39; R=&#39;0&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;3&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/></asp:ContentPlaceHolder>
+					 End Search
+				</div>
+			</div>			
+		</footer>
+	</div>
+</div>-->
+<!-- End Footer -->
+
+</div>
+</div>
+
+			
+<!-- Form Digest -->
+<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+	<SharePoint:formdigest runat="server" __designer:Preview="" __designer:Values="&lt;P N=&#39;ID&#39; T=&#39;ctl03&#39; /&gt;&lt;P N=&#39;Page&#39; ID=&#39;1&#39; /&gt;&lt;P N=&#39;TemplateControl&#39; ID=&#39;2&#39; /&gt;&lt;P N=&#39;AppRelativeTemplateSourceDirectory&#39; R=&#39;-1&#39; /&gt;"/></asp:ContentPlaceHolder>
+		
+<!-- Hide Various Placeholders -->	
+<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderPageDescription" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" />
+<asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
+				
+</SharePoint:SharePointForm>
+
+<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
+
+</body>
+</SharePoint:SPHtmlTag>

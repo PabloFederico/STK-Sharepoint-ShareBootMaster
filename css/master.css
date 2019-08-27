@@ -1,0 +1,500 @@
+/*------------------------------------*\
+    $INDICE
+\*------------------------------------*/
+
+/**
+ * RESETS BASICOS...................Estilos basicos.
+ * VARIABLES COLORES ..............Colores definidos por Telefonica.
+ * FUENTES.........................Fuentes Telefonica y iconos.
+ * ICONOS..........................Reglas basicas para los iconos.
+ * BUSCADOR........................Estilos para el buscador.
+ * MENU............................Definiciones Menu principal y desplegables.
+ * PANEL HERRAMIENTAS..............Botones y panel de herramientas.
+ * ICONOS 365......................Definiciones panel OFICE 365/iconos.
+
+ */
+
+/*------------------------------------*\
+    RESETS BASICOS
+\*------------------------------------*/
+
+body{
+  background: var(--main-bg-color);
+  font-family: 'telefonica-regular';
+  color: #003245;
+  margin: 0;
+}
+
+header{
+  background: #fff;
+  /*height: 330px;*/  
+
+}
+ul {
+    list-style-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none !important;
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+    -moz-outline-style: none;
+    border: 0px;
+}
+
+a img {
+    border: 0px;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+}
+/*------------------------------------*\
+    VARIABLES COLORES
+\*------------------------------------*/
+
+:root {
+    --main-bg-color: #fff;
+    --main-bluedark: #003245;
+    --second-blueligth: #00edff;  
+    --second-blue: #00688f;
+    --color-purple:#980098;
+    --purpleligt:#b3009c;
+    --grayligth:#d2d0d0;
+    --graydark: #636363;
+    --main-padding: 15px;    
+}
+.purple{
+background: #980098
+}
+
+/*------------------------------------*\
+    FUENTES
+\*------------------------------------*/
+
+/* FUENTES TELEFONICA  */
+@font-face {
+    font-family: 'telefonica-light';
+    src: url('../fonts/regular/TelefonicaWeb-Light.eot');
+    src: url('../fonts/regular/TelefonicaWeb-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/regular/TelefonicaWeb-Light.woff2') format('woff2'), url('../fonts/regular/TelefonicaWeb-Light.woff') format('woff'), url('../fonts/regular/TelefonicaWeb-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+    font-family: 'telefonica-regular';
+    src: url('../fonts/regular/TelefonicaWeb-Regular.eot');
+    src: url('../fonts/regular/TelefonicaWeb-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/regular/TelefonicaWeb-Regular.woff2') format('woff2'), url('../fonts/regular/TelefonicaWeb-Regular.woff') format('woff'), url('../fonts/regular/TelefonicaWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+    font-family: 'telefonica-bold';
+    src: url('../fonts/bold/TelefonicaWeb-Bold.eot');
+    src: url('../fonts/bold/TelefonicaWeb-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/bold/TelefonicaWeb-Bold.woff2') format('woff2'), url('../fonts/bold/TelefonicaWeb-Bold.woff') format('woff'), url('../fonts/bold/TelefonicaWeb-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* ICONOS 365  */
+@font-face {
+    font-family: 'SPO365Icons';
+    src: url('../fonts/fabricmdl2icons-2.47.woff2');
+    src: url('../fonts/fabricmdl2icons-2.47d.eot?#iefix') format('embedded-opentype'), url('../fonts/fabricmdl2icons-2.47.woff2') format('woff2'), url('../fonts/fabricmdl2icons-2.47.woff') format('woff'), url('../fonts/fabricmdl2icons-2.47.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+/* ICONOS GENERALES  */
+@font-face {
+      font-family: 'telefonica';
+      src: url('../fonts/iconos/telefonica.eot?80720598');
+      src: url('../fonts/iconos/telefonica.eot?80720598#iefix') format('embedded-opentype'),
+           url('../fonts/iconos/telefonica.woff?80720598') format('woff'),
+           url('../fonts/iconos/telefonica.ttf?80720598') format('truetype'),
+           url('../fonts/iconos/telefonica.svg?80720598#telefonica') format('svg');
+      font-weight: normal;
+      font-style: normal;
+}
+/*------------------------------------*\
+    ICONOS
+\*------------------------------------*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "telefonica";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ 
+.icon-pencil:before { content: '\e800'; } /* 'î €' */
+.icon-cancel-circle:before { content: '\e802'; } /* 'î ‚' */
+.icon-cog:before { content: '\e803'; } /* 'î ƒ' */
+.icon-left-open-big:before { content: '\e804'; } /* 'î „' */
+.icon-right-open-big:before { content: '\e805'; } /* 'î …' */
+.icon-up-open-big:before { content: '\e806'; } /* 'î †' */
+.icon-down-open-big:before { content: '\e807'; } /* 'î ‡' */
+.icon-plus-1:before { content: '\e809'; } /* 'î ‰' */
+.icon-minus-1:before { content: '\e80a'; } /* 'î Š' */
+.icon-menu:before { content: '\f0c9'; } /* 'ïƒ‰' */
+.icon-angle-left:before { content: '\f104'; } /* 'ï„„' */
+.icon-angle-right:before { content: '\f105'; } /* 'ï„…' */
+.icon-angle-up:before { content: '\f106'; } /* 'ï„†' */
+.icon-angle-down:before { content: '\f107'; } /* 'ï„‡' */
+
+.spacer-10{
+  margin: 10px 0;
+}
+
+h1{
+	font-size: 4.2em !important;
+	letter-spacing: -.05em;
+}
+
+footer{
+	background: var(--main-bluedark);
+	height: 70px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1.2em;
+}
+.probootstrap_section {
+    padding: 1.5em 0;
+    width: 100%;
+}
+.destacado{
+	padding: 2rem 2.5rem;
+}
+.destacado p{
+	font-size: 1.7em;
+	line-height: 1.2em !important;
+}
+.card-img-top{
+	border-radius: 0 !important;
+}
+#anio{
+	border-right: 1px solid #fff;
+	padding-right: 5px;
+}
+.mensaje{
+height: 10em;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.mensaje h2{
+  font-size: 3em;
+  text-align: center;
+  color: #292525;
+}
+article{
+margin: 0 15px;
+}
+.date{
+white-space: nowrap;
+}
+/*------------------------------------*\
+    BUSCADOR
+\*------------------------------------*/
+.buscador{
+	width: 100%;
+	padding: 30px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: var(--grayligth);
+}
+.buscador input{
+	width: 100%;
+	height: 60px;
+	padding: 0 10px;
+}
+.buscador .btn-send{
+	background: var(--graydark);
+	color: #fff;
+	border-radius: 0;
+}
+.buscador .btn-send:hover{
+background: var(--main-bluedark);
+color: #fff;
+border-radius: 0;
+}
+.fecha{
+line-height: 60px;
+border-bottom: #e8e8e8 solid 3px;
+font-family: 'telefonica-regular';
+font-size: 1.1em;	
+text-align: right;
+}
+.brand{
+height: 196px;
+padding-top: 40px;
+}
+
+/*img .img-responsive {
+    margin: auto;
+    display: block;
+}*/
+/*------------------------------------*\
+    MENU
+\*------------------------------------*/
+.bluedark{
+  background: #003245;
+} 
+.navbar .dropdown-menu div[class*="col"] {
+margin-bottom:1rem;
+}
+.dropdown-menu {
+border:none !important;
+}
+.dropdown-toggle::after{
+display: none;
+}
+.bg-navbar{
+margin: auto;
+height: 70px;
+background: #b3009c;
+}
+.navbar-nav > li > a {
+height: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0 .78em;
+float: left;
+font-family: 'telefonica-bold';
+color: #fff;
+font-size: 26px;
+letter-spacing: -.01em;
+text-decoration: none;  
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus{
+background:#00edff;
+color:#003245;
+}
+ 
+/* -----MENU DESPLEGABLE------- */
+.navbar .dropdown {position:static;}
+
+.navbar {
+padding-top:0px;
+padding-bottom:0px;
+
+}
+.navbar .dropdown-menu {
+border-radius: 0;
+background: #00edff!important;
+border-bottom: 38px solid #003245 !important;
+position: relative;
+top: 68px;
+padding: 20px;
+}
+
+.dropdown-menu {
+width:100%;
+left:0;
+right:0;  
+}
+
+/* Menu Content Styles */
+.nav-column > ul > li a{
+display: block;
+line-height: 26px;
+font-family: 'telefonica-bold';
+font-size: 1.2em;
+color: #003245;
+padding: 7px 0;
+border-bottom: 2px solid #00a2b5;
+font-size-adjust: 0.58;
+}
+
+.nav-column > ul > li > ul > li > a{
+font-family: 'telefonica-regular';
+color: #003245;
+margin-left: 5px;
+border-bottom: 0;
+font-weight: normal;
+}
+.nav-column li a:hover { 
+color: #636363; 
+}
+.navbar-dark .navbar-toggler{
+    color: #fff; 
+    border: none;
+}
+button:focus {
+outline: 0 !important;
+}
+
+/*------------------------------------*\
+    PANEL HERRAMIENTAS
+\*------------------------------------*/
+.btn-herramientas{
+font-family: 'telefonica-regular';
+font-size: 1.5em;
+color: #fff;
+background: var(--color-purple);
+height: 100px;
+display: block;
+width: 273px;
+position: absolute; 
+display: flex;
+justify-content: center;
+align-items: center;
+bottom: 0;
+}
+.btn-herramientas:hover,
+.btn-herramientas:focus{
+color: #fff;
+background: var(--purpleligt);
+}
+.btn-m-herramientas{
+  display: none;
+}
+.panel-herramientas{
+width: 100%;
+background: var(--purpleligt);
+color: #fff;
+font-family: 'telefonica-regular';
+}
+.panel-herramientas h2{
+text-align: center;
+font-family: 'telefonica-bold';
+font-style: italic;
+font-size: 2.5em;
+margin-bottom: 0.5em;
+}
+.panel-herramientas .accesos li{
+font-size: 1.7em;
+text-align: left;
+line-height: 1em;
+padding-top: .80em;
+letter-spacing: -.05em;
+}
+.panel-herramientas .accesos li i{
+/*font-size: 1.2em;*/
+}
+.panel-herramientas .icon-cancel-circle,
+.panel-herramientas .icon-pencil{
+font-size: 2em;
+color: #fff;
+}
+
+.sp-border{
+border-right: solid 2px #fff;
+}
+.st-border{
+width: 147px;
+height: 10px;
+display: block;
+background-color: #fff;
+margin: auto;
+}
+.panel-herramientas span {
+font-size: 1em;
+font-style: italic;
+}
+.panel-365{
+background: var(--main-bluedark);
+margin: auto;
+width: 100%;
+/*display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-content: center;
+align-items: center;*/
+
+}
+/*------------------------------------*\
+    ICONOS 365
+\*------------------------------------*/
+
+.iconos-365 {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+flex-direction: row;
+padding-bottom: 2em;
+}
+.blue {
+background: #0072c6
+}
+.ms-Icon {
+font-family: 'SPO365Icons';
+font-style: normal;
+font-size: 40px;
+speak: none;
+padding: 5px;
+color: #fff;
+}
+.caja {
+height: 130px;
+width: 130px;
+font-size: 20px;
+text-align: center;
+align-items: center;
+display: flex;
+flex-direction: column; /* aquÃ­ */
+justify-content: center;
+float: left;
+margin: 10px;
+}
+.caja span{
+color: #fff;
+padding-top: 10px;
+font-family: 'telefonica-regular';
+font-size: 14px;
+font-weight: 100;
+
+}
+.OutlookLogoInverse16:before {
+    content: '\F39C';
+    padding-top: 10px;
+}
+.OutlookLogoInverse16:before {
+    content: '\F39C';
+}
+.Calendar:before {
+    content: '\E787';
+}
+.People:before {
+    content: '\E716';
+}
+.YammerLogo:before {
+    content: '\ED19';
+}
+.OneDrive:before {
+    content: '\E941';
+}
+.Word:before {
+    content: '\F390';
+}
+
+}
